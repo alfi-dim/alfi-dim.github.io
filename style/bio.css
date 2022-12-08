@@ -1,0 +1,71 @@
+.profile{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 70%;
+    height: auto;
+    background-color: #A9E4D7;
+    border: 1px solid black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.shadow{
+    box-shadow: 1px 5px rgba(215, 215, 215,0.9);
+}
+.box-profile.bio {
+    flex: 80%;
+}
+.box-profile.photo{
+    flex: 20%;
+}
+.sub-info{
+    padding: 10px;
+    line-height: 1.5;
+}
+.box-profile{
+    position: relative;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 100%;
+    
+}
+.box-border {
+    width: 0;
+    height: 0;
+    border-bottom: 350px solid #A9E4D7;
+    border-right: 120px solid transparent;
+    z-index: 99;
+    flex: 0%;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    right: 0;
+    bottom: 0;
+}
+.box-profile:last-child{
+    padding: 0;
+}
+
+.photo-profile{
+    object-fit: cover;
+    max-height: 350px;
+}
+ul{
+    list-style-type: none;
+}
+ul li {
+    padding: 5px 0;
+}
+
+.linkedin-profile{
+    display: inline-block;
+    position: absolute;
+    visibility: hidden;
+    z-index: 99;
+}
+
+.linkedin-tooltip:hover .linkedin-profile{
+    visibility: visible;
+}

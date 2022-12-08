@@ -1,0 +1,67 @@
+.detail-box{
+    background-color: #63B4B8;
+    position: relative;
+    width: 85%;
+    margin: 0% auto;
+    margin-top: 35px;
+}
+.detail{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.detail-info{
+    background-image: url(../assets/img/t.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 5px;
+    margin: 10px;
+    flex: 40%;
+    background-color: #C0EEE4;
+    display: flex;
+    flex-direction: row;
+}
+
+.detail-info .content{
+    padding: 15px 0;
+    flex: 30%;
+}
+.content-header{
+    font-size: 18px;
+    font-weight: bold   ;
+}
+.content-main{
+    font-size: 14px;
+}
+.content-footer{
+    font-size: 12px;
+}
+
+#ring{
+    flex: 0%;
+    text-align: center;
+    height: 40px;
+    border-radius: 100%;
+    
+    background-color: #e9f2f0;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.detail-info.education{
+    background-image: url(../assets/icon/education.svg);
+}
+
+.detail-info.experience{
+    background-image: url(../assets/icon/work-experience.svg);
+    background-size: 60% !important;
+}
+
+.detail-info.skills{
+    background-image: url(../assets/icon/skills.svg);
+    background-size: 60% !important;
+}
