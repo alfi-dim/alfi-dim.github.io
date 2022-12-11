@@ -13,7 +13,7 @@
     padding: 10px 0;
 }
 .detail-info{
-    background-image: url(../assets/img/t.png);
+    background-image: url(../../assets/img/t.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -53,15 +53,15 @@
 }
 
 .detail-info.education{
-    background-image: url(../assets/icon/education.svg);
+    background-image: url(../../assets/icon/education.svg);
 }
 
 .detail-info.experience{
-    background-image: url(../assets/icon/work-experience.svg);
+    background-image: url(../../assets/icon/work-experience.svg);
     background-size: 60% !important;
 }
 
 .detail-info.skills{
-    background-image: url(../assets/icon/skills.svg);
+    background-image: url(../../assets/icon/skills.svg);
     background-size: 60% !important;
 }

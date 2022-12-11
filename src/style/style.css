@@ -1,6 +1,7 @@
 @import url(bio.css);
 @import url(detail-info.css);
 @import url(footer.css);
+@import url(header.css);
 
 * {
     padding: 0;
@@ -64,5 +65,8 @@ a{
     }
     ul li:nth-child(2){
         font-size: 9px;
+    }
+    .detail-info{
+        background-size: cover;
     }
 }
