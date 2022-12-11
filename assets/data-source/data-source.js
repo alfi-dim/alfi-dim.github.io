@@ -1,6 +1,7 @@
 const data =  [
                 {
                 language: "ID",
+                languageMenu: 'Bahasa',
                 header: "Seseorang yang menyebut dirinya Pelajar",
                 summary: "Cukup tertarik dalam bahasa pemrograman (website dan desktop), diskusi terbuka, dan suka membuat asumsi terhadap hal-hal disekitar. Saya senang mempelajari hal baru, terutama yang bermanfaat dalam kehidupan seperti alam (hewan dan tumbuhan), kesehatan (faktor, gejala, dan pencegahan penyakit), teknologi (cara menggunakan sesuatu, mengatasi kerusakan, langkah cepat dan efisien dalam menggunakan suatu perangkat), berkomunikasi dan bertutur kata.",
                 contact: [
@@ -101,6 +102,7 @@ const data =  [
                 },
                 {
                 language: "EN",
+                languageMenu: 'Language',
                 header: "a self-proclaimed Learner",
                 summary: "Quite interested in programming languages ​​(website and desktop), open discussion, and likes to make assumptions about things around. I like to learn new things, especially those that are useful in life such as biology (animals and plants), health (factors, symptoms, and disease prevention), technology (how to use things, dealing with damage, quick and efficient steps in using a device), and two-way discussion.",
                 contact: [
