@@ -1,18 +1,31 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const languageMain = document.getElementById('language-menu-main');
-    const languageSecond = document.getElementById('language-menu-second');
+import data from '../../assets/data-source/data-source.js';
 
-    languageMain.addEventListener('click', function () {
-        languageSecond.classList.toggle('show');
+const userLanguage = navigator.language;
+const renderLanguageMenu = () => {
+    data.forEach(data => {
+        console.log(data);
+    });
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    
+    const contentLanguage = document.getElementById('language-menu-main');
+    const languageMenu = document.getElementById('language-menu-second');
+    
+    
+
+    contentLanguage.addEventListener('click', function () {
+        languageMenu.classList.toggle('show');
     });
 
-    languageSecond.addEventListener('click', function (e) {
+    languageMenu.addEventListener('click', function (e) {
         const clicked = e.target.innerText;
 
-        const b = languageMain.innerText;
-        languageMain.innerText = clicked;
+        const b = contentLanguage.innerText;
+        contentLanguage.innerText = clicked;
         e.target.innerText = b;
-        languageSecond.classList.remove('show');
+        languageMenu.classList.remove('show');
     })
-
+    
+    renderLanguageMenu();
 })
