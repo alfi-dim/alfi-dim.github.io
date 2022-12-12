@@ -38,7 +38,20 @@ const swapLanguage = (targetId, swapIndex) => {
 }
 
 const renderBiography = (index) => {
-    
+    const nameElement = document.createElement('h1');
+    const headerElement = document.createElement('h3');
+    const summaryEleemnt = document.createElement('h5');
+
+    nameElement.innerText = "Dimas Alfiansyah";
+    headerElement.innerText = data[index].header;
+    summaryEleemnt.innerText = data[index].summary;
+
+    const biographyElement = document.getElementById('main-info');
+    biographyElement.innerHTML = '';
+
+    biographyElement.appendChild(nameElement);
+    biographyElement.appendChild(headerElement);
+    biographyElement.appendChild(summaryEleemnt);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -52,8 +65,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // contentLanguage.innerText = data[index].language;
         // languageInfo.innerText = data[index].languageMenu;
         swapLanguage(targetId, index);
+        renderBiography(index);
         languageMenu.classList.remove('show');
     })
     
+    const index = data.findIndex((data) => data.languageId === userLanguage.toUpperCase());
+    renderBiography(index);
     renderLanguageMenu();
 })
