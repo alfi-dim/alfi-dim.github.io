@@ -19,9 +19,16 @@
 .box-profile.photo{
     flex: 20%;
 }
-.sub-info{
+#sub-info{
     padding: 10px;
     line-height: 1.5;
+}
+#sub-info > ul > li, #sub-info > ul > li > a,  #sub-info > ul > li > .linkedin-tooltip > a{
+    display: flex;
+    flex-direction: row;
+}
+li > #name, a > #name {
+    padding-left: 10px;
 }
 .box-profile{
     position: relative;

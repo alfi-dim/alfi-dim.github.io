@@ -54,6 +54,48 @@ const renderBiography = (index) => {
     biographyElement.appendChild(summaryEleemnt);
 }
 
+const renderContact = (index) => {
+    const contactContainer = document.getElementById('sub-info');
+    contactContainer.innerHTML = '';
+    const listContainer = document.createElement('ul');
+    listContainer.innerHTML = '';
+
+    console.log(index);
+    data[index].contact.forEach((data) => {
+        const listElement = document.createElement('li');
+        const iconElement = document.createElement('img');
+        iconElement.setAttribute('src', data.icon);
+        iconElement.setAttribute('class', 'svg');
+
+        const nameElement = document.createElement('p');
+        nameElement.setAttribute('id', 'name');
+        nameElement.innerText = data.name;
+
+        listElement.appendChild(iconElement);
+        if (data.isExternal) {
+            const externalElement = document.createElement('a');
+            externalElement.setAttribute('href', data.externalData.link);
+            externalElement.appendChild(nameElement);
+
+            const imgExternalElement = document.createElement('img');
+            imgExternalElement.setAttribute('src', data.externalData.icon);
+            imgExternalElement.setAttribute('class', 'svg external-link')
+            
+            externalElement.appendChild(imgExternalElement);
+            if (typeof data.externalData.div === 'string') {
+                externalElement.innerHTML = data.externalData.div;
+            }
+            listElement.appendChild(externalElement);
+        } else {
+            listElement.appendChild(nameElement);
+        }
+
+        listContainer.appendChild(listElement);
+    });
+
+    contactContainer.appendChild(listContainer)
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     contentLanguage.addEventListener('click', function () {
         languageMenu.classList.toggle('show');
@@ -71,5 +113,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
     const index = data.findIndex((data) => data.languageId === userLanguage.toUpperCase());
     renderBiography(index);
+    renderContact(index);
     renderLanguageMenu();
 })
