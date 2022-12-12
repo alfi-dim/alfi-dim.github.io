@@ -24,7 +24,7 @@ const renderLanguageMenu = () => {
 const swapLanguage = (targetId, swapIndex) => {
     languageMenu.innerHTML = '';
     contentLanguage.innerText = data[swapIndex].language;
-    languageInfo.innerText = data[swapIndex].languageMenu;
+    languageInfo.innerText = data[swapIndex].languageMenu + ": ";
 
     data.forEach(data => {
         if (data.languageId === targetId) {
