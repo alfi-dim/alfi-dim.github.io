@@ -33,7 +33,6 @@ const data =  [
                             externalData: {
                                 link: "https://www.linkedin.com/in/dimasalfiansyah/",
                                 icon: "./assets/icon/external-link.svg",
-                                div: "<div class='badge-base LI-profile-badge linkedin-profile' data-locale='en_US' data-size='medium' data-theme='light' data-type='VERTICAL' data-vanity='dimasalfiansyah' data-version='v1'></div>",
                             },
                             name: "Linkedin/Dimas Alfiansyah",
                             icon: "./assets/icon/linkedin.svg",
@@ -44,10 +43,19 @@ const data =  [
                             externalData: {
                                 link: "https://www.dicoding.com/users/alfi_dim/academies",
                                 icon: "./assets/icon/external-link.svg",
-                                div: false,
                             },
                             name: "Dicoding/Dimas Alfiansyah",
                             icon: "https://i.imgur.com/iJq78XH.jpg",
+                        },
+                        {
+                            type: 'github',
+                            isExternal: true,
+                            externalData: {
+                                link: "https://github.com/Zatfley",
+                                icon: "./assets/icon/external-link.svg",
+                            },
+                            name: "Github/Dimas Alfiansyah(Zatfley)",
+                            icon: "./assets/icon/github.svg"
                         },
                     ],
                 info: [
@@ -135,7 +143,6 @@ const data =  [
                                 externalData: {
                                     link: "https://www.linkedin.com/in/dimasalfiansyah/",
                                     icon: "./assets/icon/external-link.svg",
-                                    div: "<div class='badge-base LI-profile-badge linkedin-profile' data-locale='en_US' data-size='medium' data-theme='light' data-type='VERTICAL' data-vanity='dimasalfiansyah' data-version='v1'></div>",
                                 },
                                 name: "Linkedin/Dimas Alfiansyah",
                                 icon: "./assets/icon/linkedin.svg",
@@ -146,10 +153,19 @@ const data =  [
                                 externalData: {
                                     link: "https://www.dicoding.com/users/alfi_dim/academies",
                                     icon: "./assets/icon/external-link.svg",
-                                    div: false,
                                 },
                                 name: "Dicoding/Dimas Alfiansyah",
                                 icon: "https://i.imgur.com/iJq78XH.jpg",
+                            },
+                            {
+                                type: 'github',
+                                isExternal: true,
+                                externalData: {
+                                    link: "https://github.com/Zatfley",
+                                    icon: "./assets/icon/external-link.svg",
+                                },
+                                name: "Github/Dimas Alfiansyah(Zatfley)",
+                                icon: "./assets/icon/github.svg"
                             },
                         ],
                 info: [

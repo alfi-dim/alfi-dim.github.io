@@ -75,6 +75,8 @@ const renderContact = (index) => {
         if (data.isExternal) {
             const externalElement = document.createElement('a');
             externalElement.setAttribute('href', data.externalData.link);
+            externalElement.setAttribute('target','_blank');
+            externalElement.setAttribute('rel', 'noopener');
             externalElement.appendChild(nameElement);
 
             const imgExternalElement = document.createElement('img');
@@ -82,9 +84,6 @@ const renderContact = (index) => {
             imgExternalElement.setAttribute('class', 'svg external-link')
             
             externalElement.appendChild(imgExternalElement);
-            if (typeof data.externalData.div === 'string') {
-                externalElement.innerHTML = data.externalData.div;
-            }
             listElement.appendChild(externalElement);
         } else {
             listElement.appendChild(nameElement);
@@ -108,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // languageInfo.innerText = data[index].languageMenu;
         swapLanguage(targetId, index);
         renderBiography(index);
+        renderContact(index);
         languageMenu.classList.remove('show');
     })
     
