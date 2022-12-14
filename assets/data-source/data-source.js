@@ -51,10 +51,10 @@ const data =  [
                             type: 'github',
                             isExternal: true,
                             externalData: {
-                                link: "https://github.com/Zatfley",
+                                link: "https://github.com/alfi-dim",
                                 icon: "./assets/icon/external-link.svg",
                             },
-                            name: "Github/Dimas Alfiansyah(Zatfley)",
+                            name: "Github/Dimas Alfiansyah",
                             icon: "./assets/icon/github.svg"
                         },
                     ],
@@ -173,10 +173,10 @@ const data =  [
                                 type: 'github',
                                 isExternal: true,
                                 externalData: {
-                                    link: "https://github.com/Zatfley",
+                                    link: "https://github.com/alfi-dim",
                                     icon: "./assets/icon/external-link.svg",
                                 },
-                                name: "Github/Dimas Alfiansyah(Zatfley)",
+                                name: "Github/Dimas Alfiansyah",
                                 icon: "./assets/icon/github.svg"
                             },
                         ],
