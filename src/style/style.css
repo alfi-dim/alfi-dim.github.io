@@ -8,7 +8,7 @@
     margin: 0;
 }
 body{
-    background-color: #e9f2f0;
+    background-color: #FEFCF3;
 }
 main{
     padding: 10px;
@@ -40,6 +40,16 @@ a{
     }
     .detailInfo{
         flex: 100%;
+    }
+
+    #title{
+        flex: 80%;
+    }
+    #language{
+        flex: 20%;
+    }
+    #language-menu-second{
+        width: 7.3rem;
     }
 }
 

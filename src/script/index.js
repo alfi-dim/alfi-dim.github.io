@@ -95,7 +95,106 @@ const renderContact = (index) => {
     contactContainer.appendChild(listContainer)
 }
 
+const renderDetailInfo = (index) => {
+    const detailBoxContainer = document.getElementById('detail-box');
+    detailBoxContainer.innerHTML = '';
+
+    data[index].info.forEach((info) => {
+        const detailContainer = document.createElement('div');
+        detailContainer.classList.add('detail-container');
+
+        const rightDetailElement = document.createElement('span');
+        rightDetailElement.className = 'right';
+        info.right.forEach((data) => {
+            const detailInfoContainer = document.createElement('span');
+            detailInfoContainer.className = 'detail-info';
+
+            const contentContainer = document.createElement('span');
+            contentContainer.className = 'content';
+
+            const headerContentElement = document.createElement('p');
+            headerContentElement.className = 'content-header';
+            headerContentElement.innerText = data.title;
+
+            const mainContentElement = document.createElement('p');
+            mainContentElement.className = 'content-main';
+            mainContentElement.innerText = data.main;
+
+            const secondContentElement = document.createElement('p');
+            secondContentElement.className = 'content-main';
+            secondContentElement.innerText = data.second;
+
+            const footerContentElement = document.createElement('p');
+            footerContentElement.className = 'content-footer';
+            footerContentElement.innerText = data.footer;
+
+            contentContainer.appendChild(headerContentElement);
+            contentContainer.appendChild(mainContentElement);
+            contentContainer.appendChild(secondContentElement);
+            contentContainer.appendChild(footerContentElement);
+
+            detailInfoContainer.appendChild(contentContainer);
+
+            rightDetailElement.appendChild(detailInfoContainer);
+        });
+
+        const ringElement = document.createElement('span');
+        ringElement.setAttribute('class', `detail-info ${info.type}`);
+        ringElement.setAttribute('id', 'ring');
+
+        const leftDetailElement = document.createElement('span');
+        leftDetailElement.className = 'left';
+        info.left.forEach((data) => {
+            const detailInfoContainer = document.createElement('span');
+            detailInfoContainer.className = 'detail-info';
+
+            const contentContainer = document.createElement('span');
+            contentContainer.className = 'content';
+
+            const headerContentElement = document.createElement('p');
+            headerContentElement.className = 'content-header';
+            headerContentElement.innerText = data.title;
+
+            const mainContentElement = document.createElement('p');
+            mainContentElement.className = 'content-main';
+            mainContentElement.innerText = data.main;
+
+            const secondContentElement = document.createElement('p');
+            secondContentElement.className = 'content-main';
+            secondContentElement.innerText = data.second;
+
+            const footerContentElement = document.createElement('p');
+            footerContentElement.className = 'content-footer';
+            footerContentElement.innerText = data.footer;
+
+            contentContainer.appendChild(headerContentElement);
+            contentContainer.appendChild(mainContentElement);
+            contentContainer.appendChild(secondContentElement);
+            contentContainer.appendChild(footerContentElement);
+
+            detailInfoContainer.appendChild(contentContainer);
+
+            leftDetailElement.appendChild(detailInfoContainer);
+        });
+        
+        detailContainer.appendChild(rightDetailElement);
+        detailContainer.appendChild(ringElement);
+        detailContainer.appendChild(leftDetailElement);
+
+        detailBoxContainer.appendChild(detailContainer);
+    });
+    
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener("scroll", (event) => {
+        const navBarElement = document.getElementById('nav-bar');
+        if (window.scrollY !== 0) {
+            navBarElement.style.backgroundColor = 'rgba(203, 237, 213,0.8)';
+        } else {
+            navBarElement.style.backgroundColor = 'rgba(203, 237, 213,1)';
+        }
+    });
     contentLanguage.addEventListener('click', function () {
         languageMenu.classList.toggle('show');
     });
@@ -107,6 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // languageInfo.innerText = data[index].languageMenu;
         swapLanguage(targetId, index);
         renderBiography(index);
+        renderDetailInfo(index);
         renderContact(index);
         languageMenu.classList.remove('show');
     })
@@ -115,4 +215,5 @@ document.addEventListener('DOMContentLoaded', function () {
     renderBiography(index);
     renderContact(index);
     renderLanguageMenu();
+    renderDetailInfo(index);
 })

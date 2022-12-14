@@ -1,12 +1,13 @@
 header{
+    position: fixed;
+    z-index: 99;
     width: 100%;
 }
-.nav-bar{
-    background-color: aqua;
+#nav-bar{
+    background-color: rgba(203, 237, 213,1);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
     padding: 15px;
 }
 #title{
@@ -17,8 +18,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #97DECE;
     padding: 5px;
 }
 
@@ -37,7 +37,6 @@ header{
     flex-direction: row;
 }
 #language-menu-main{
-    
     height: 100%;
     display: flex;
 }
@@ -53,12 +52,11 @@ header{
     border-top: 5px solid black;
 }
 #language-menu-second{
-    
+    margin-top: 1.4em;
     padding: 0 5px;
-    top: 7.2%;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
-    /* width: 10.5vw; */
+    background-color: #97DECE;
+    width: 7.1rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }

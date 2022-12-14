@@ -4,6 +4,7 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     margin: 0 auto;
+    margin-top: 100px;
     width: 70%;
     height: auto;
     background-color: #A9E4D7;
@@ -11,7 +12,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .shadow{
-    box-shadow: 1px 5px rgba(215, 215, 215,0.9);
+    box-shadow: 2px 8px rgba(0, 0, 0,0.4);
 }
 .box-profile.bio {
     flex: 80%;
@@ -43,7 +44,7 @@ li > #name, a > #name {
     height: 0;
     border-bottom: 350px solid #A9E4D7;
     border-right: 120px solid transparent;
-    z-index: 99;
+   
     flex: 0%;
     position: absolute;
     top: 0;
