@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Sofia);
 header{
     position: fixed;
     z-index: 99;
@@ -11,7 +12,9 @@ header{
     padding: 15px;
 }
 #title{
+    font-family: Sofia;
     flex: 85%;
+    font-size: larger;
 }
 #language{
     flex: 15%;
