@@ -60,7 +60,6 @@ const renderContact = (index) => {
     const listContainer = document.createElement('ul');
     listContainer.innerHTML = '';
 
-    console.log(index);
     data[index].contact.forEach((data) => {
         const listElement = document.createElement('li');
         const iconElement = document.createElement('img');
@@ -210,8 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     
     const index = data.findIndex((data) => data.languageId.includes(userLanguage));
-    
-    console.log(index);
+
     renderBiography(index);
     renderContact(index);
     renderLanguageMenu();
