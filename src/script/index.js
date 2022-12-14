@@ -9,14 +9,14 @@ const renderLanguageMenu = () => {
     languageMenu.innerHTML = '';
     const language = new RegExp(userLanguage, 'i');
     data.forEach(data => {
-        if (language.test(data.languageId)) {
+        if (data.languageId.includes(userLanguage)) {
             contentLanguage.innerText = data.language;
             languageInfo.innerText = data.languageMenu + ": ";
             return; 
         }
         const languageMenuListElement = document.createElement('li');
         languageMenuListElement.innerText = data.language;
-        languageMenuListElement.setAttribute('id', data.languageId);
+        languageMenuListElement.setAttribute('id', `${data.languageId}`);
         languageMenu.appendChild(languageMenuListElement);
     });
 };
@@ -187,7 +187,6 @@ const renderDetailInfo = (index) => {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log(data);
     window.addEventListener("scroll", (event) => {
         const navBarElement = document.getElementById('nav-bar');
         if (window.scrollY !== 0) {
@@ -202,9 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     languageMenu.addEventListener('click', function (e) {
         const targetId = e.target.id;
-        const index = data.findIndex((data) => data.languageId === targetId);
-        // contentLanguage.innerText = data[index].language;
-        // languageInfo.innerText = data[index].languageMenu;
+        const index = data.findIndex((data) => data.languageId.includes(targetId));
         swapLanguage(targetId, index);
         renderBiography(index);
         renderDetailInfo(index);
@@ -212,7 +209,9 @@ document.addEventListener('DOMContentLoaded', function () {
         languageMenu.classList.remove('show');
     })
     
-    const index = data.findIndex((data) => data.languageId === userLanguage.toUpperCase());
+    const index = data.findIndex((data) => data.languageId.includes(userLanguage));
+    
+    console.log(index);
     renderBiography(index);
     renderContact(index);
     renderLanguageMenu();
