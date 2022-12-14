@@ -24,7 +24,7 @@
     padding: 10px;
     line-height: 1.5;
 }
-#sub-info > ul > li, #sub-info > ul > li > a,  #sub-info > ul > li > .linkedin-tooltip > a{
+#sub-info > ul > li, #sub-info > ul > li > a{
     display: flex;
     flex-direction: row;
 }
@@ -67,13 +67,6 @@ ul li {
     padding: 5px 0;
 }
 
-.linkedin-profile{
-    display: inline-block;
-    position: absolute;
-    visibility: hidden;
-    z-index: 99;
-}
-
-.linkedin-tooltip:hover .linkedin-profile{
-    visibility: visible;
+h5 {
+    font-weight: normal;
 }
