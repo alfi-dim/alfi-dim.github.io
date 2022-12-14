@@ -53,7 +53,7 @@ a{
     }
 }
 
-@media screen and (max-width: 710px) {
+@media screen and (max-width: 710px ) {
     .box-border{
         visibility: hidden;
     }
@@ -78,5 +78,15 @@ a{
     }
     .detail-info{
         background-size: cover;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body, span, div, ul li, p, .content p {
+        font-size: 0.7rem;
+    }
+    .detail-info{
+        background-size: 240px;
+        background-position: right bottom;
     }
 }
