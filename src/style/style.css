@@ -1,0 +1,82 @@
+@import url(bio.css);
+@import url(detail-info.css);
+@import url(footer.css);
+@import url(header.css);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #FEFCF3;
+}
+main{
+    padding: 10px;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.svg{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.svg.external-link {
+    width: 10px;
+    height: 10px;
+    vertical-align: super;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    #ring{
+        display: none;
+    }
+    .detailInfo{
+        flex: 100%;
+    }
+
+    #title{
+        flex: 80%;
+    }
+    #language{
+        flex: 20%;
+    }
+    #language-menu-second{
+        width: 7.3rem;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    .box-border{
+        visibility: hidden;
+    }
+    .profile{
+        flex-direction: column;
+    }
+    .box-profile.bio{
+        order: 2;
+    }
+    .box-profile.photo{
+        order: 1 !important;
+        margin: 0 auto;
+    }
+    .photo-profile{
+        max-height: 315px;
+    }
+    ul li{
+        font-size: 12px;
+    }
+    ul li:nth-child(2){
+        font-size: 9px;
+    }
+    .detail-info{
+        background-size: cover;
+    }
+}

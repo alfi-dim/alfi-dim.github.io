@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Sofia);
+header{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+#nav-bar{
+    background-color: rgba(203, 237, 213,1);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 15px;
+}
+#title{
+    font-family: Sofia;
+    flex: 85%;
+    font-size: larger;
+}
+#language{
+    flex: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #97DECE;
+    padding: 5px;
+}
+
+#language-info{
+    display: inline-block;
+    flex: 10%;
+}
+#language-menu{
+    flex: 90%;
+    padding-left: 5px;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+#language-menu-main{
+    height: 100%;
+    display: flex;
+}
+#language-menu-main::after{
+    position: relative;
+    margin-top: 2px;
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    
+    border-top: 5px solid black;
+}
+#language-menu-second{
+    margin-top: 1.4em;
+    padding: 0 5px;
+    position: absolute;
+    background-color: #97DECE;
+    width: 7.1rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.hide{
+    order: 2;
+    display: none;
+}
+.show{
+    order: 1;
+    display: block !important;
+}
