@@ -187,6 +187,7 @@ const renderDetailInfo = (index) => {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    console.log(data);
     window.addEventListener("scroll", (event) => {
         const navBarElement = document.getElementById('nav-bar');
         if (window.scrollY !== 0) {
