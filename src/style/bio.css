@@ -58,7 +58,7 @@ li > #name, a > #name {
 
 .photo-profile{
     object-fit: cover;
-    max-height: 350px;
+    max-width: 450px;
 }
 ul{
     list-style-type: none;
