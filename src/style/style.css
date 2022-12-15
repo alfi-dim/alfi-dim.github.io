@@ -53,7 +53,7 @@ a{
     }
 }
 
-@media screen and (max-width: 710px ) {
+@media screen and (max-width: 900px ) {
     .box-border{
         visibility: hidden;
     }
@@ -68,7 +68,7 @@ a{
         margin: 0 auto;
     }
     .photo-profile{
-        max-height: 315px;
+        max-width: 450px;
     }
     ul li{
         font-size: 12px;
@@ -78,6 +78,12 @@ a{
     }
     .detail-info{
         background-size: cover;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .photo-profile{
+        max-width: 100%;
     }
 }
 

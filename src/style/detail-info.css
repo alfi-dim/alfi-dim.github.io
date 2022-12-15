@@ -25,7 +25,7 @@
     flex: 45%;
 }
 .detail-info{
-    background-image: url(../../assets/img/t.png);
+    background-image: url(../../assets/img/detail-background.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;

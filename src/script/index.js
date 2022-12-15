@@ -188,10 +188,14 @@ const renderDetailInfo = (index) => {
 document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener("scroll", (event) => {
         const navBarElement = document.getElementById('nav-bar');
+        const styleElement = document.head.appendChild(document.createElement('style'));
+        styleElement.innerHTML = '';
         if (window.scrollY !== 0) {
             navBarElement.style.backgroundColor = 'rgba(203, 237, 213,0.8)';
+            styleElement.innerHTML = '#nav-bar::before {opacity: 0.8}';
         } else {
             navBarElement.style.backgroundColor = 'rgba(203, 237, 213,1)';
+            styleElement.innerHTML = '';
         }
     });
     contentLanguage.addEventListener('click', function () {

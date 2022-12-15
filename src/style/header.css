@@ -11,6 +11,19 @@ header{
     justify-content: flex-end;
     padding: 15px;
 }
+#nav-bar::before{
+    content: '';
+    background-image: url(../../assets/img/e.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    /* opacity: 0.5; */
+}
 #title{
     font-family: Sofia;
     flex: 85%;
