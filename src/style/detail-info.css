@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: row;
     vertical-align: middle;
+    
 }
 .detail-container .right{
     flex: 45%;
@@ -36,6 +37,7 @@
     flex-direction: row;
     height: 70%;
 }
+
 
 .detail-info .content{
     padding: 15px 0;
@@ -63,6 +65,8 @@
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
+    
+    border: 2px solid C0EEE4;
 }
 
 .detail-info.education{
