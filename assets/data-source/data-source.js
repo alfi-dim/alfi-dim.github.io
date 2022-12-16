@@ -115,7 +115,7 @@ const data =  [
                                         title: "Bahasa",
                                         main: "Bahasa Indonesia",
                                         second: "Bahasa Inggris",
-                                        footer: false,
+                                        footer: '',
                                    },
                                 ],
                             },
